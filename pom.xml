@@ -100,7 +100,6 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
