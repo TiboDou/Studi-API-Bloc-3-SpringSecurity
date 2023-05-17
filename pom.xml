@@ -14,7 +14,7 @@
 	<name>vitrine_produits_promo</name>
 	<description>API Rest Site Vitrine</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>20</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -30,14 +30,6 @@
 			<artifactId>httpclient</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -108,6 +100,15 @@
 
 	<build>
 		<plugins>
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
