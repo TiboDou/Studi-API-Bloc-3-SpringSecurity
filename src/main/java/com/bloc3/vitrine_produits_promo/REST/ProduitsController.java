@@ -4,8 +4,6 @@ import com.bloc3.vitrine_produits_promo.Models.Produits;
 import com.bloc3.vitrine_produits_promo.REST.Services.ProduitsServices;
 import com.bloc3.vitrine_produits_promo.util.SiExiste;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,11 +21,6 @@ public class ProduitsController {
     @GetMapping
     public List<Produits> selectProduits() {
         List<Produits> produits = prodService.selectProduits();
-
-        for (Produits produit : produits) {
-            Link selfLink = WebMvcLinkBuilder.linkTo(ProduitsController.class).slash(produit.getNo_produit()).withSelfRel();
-            produit.add(selfLink);
-        }
 
         return prodService.selectProduits();
     }
