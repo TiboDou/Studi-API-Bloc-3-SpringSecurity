@@ -15,9 +15,7 @@
 	<name>vitrine_produits_promo</name>
 	<description>API Rest Site Vitrine</description>
 	<properties>
-		<java.version>20</java.version>
-		<maven.compiler.source>20</maven.compiler.source>
-		<maven.compiler.target>20</maven.compiler.target>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -32,6 +30,13 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.10.1</version>
 		</dependency>
 
 
