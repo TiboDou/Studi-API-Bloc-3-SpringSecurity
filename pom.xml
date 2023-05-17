@@ -105,15 +105,7 @@
 
 	<build>
 		<plugins>
-			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>20</source>
-					<target>20</target>
-				</configuration>
-			</plugin>
+
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
