@@ -1,5 +1,9 @@
-package com.bloc3.vitrine_produits_promo.config;
+package com.bloc3.vitrine_produits_promo.REST;
 
+import com.bloc3.vitrine_produits_promo.config.AuthenticationRequest;
+import com.bloc3.vitrine_produits_promo.config.AuthenticationResponse;
+import com.bloc3.vitrine_produits_promo.config.AuthenticationService;
+import com.bloc3.vitrine_produits_promo.config.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +24,7 @@ public class AuthenticationController {
     }
 
 
-    @CrossOrigin(origins = "http://localhost:8080git", allowCredentials = "true")
+    @CrossOrigin(origins = "http://localhost:8080", allowCredentials = "true")
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticate (
             @RequestBody AuthenticationRequest request
