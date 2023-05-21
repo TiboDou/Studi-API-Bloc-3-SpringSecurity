@@ -24,7 +24,7 @@ public class AuthenticationController {
     }
 
 
-    @CrossOrigin(origins = "http://localhost:8080", allowCredentials = "true")
+    @CrossOrigin(origins = "*")
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticate (
             @RequestBody AuthenticationRequest request

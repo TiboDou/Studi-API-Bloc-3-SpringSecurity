@@ -17,7 +17,7 @@ public class ProduitsController {
     @Autowired //
     private ProduitsServices prodService;
 
-    @CrossOrigin(origins = "*")
+
     @GetMapping
     public List<Produits> selectProduits() {
         List<Produits> produits = prodService.selectProduits();
@@ -25,7 +25,6 @@ public class ProduitsController {
         return prodService.selectProduits();
     }
 
-    @CrossOrigin(origins ="*")
     @GetMapping("/{no_produit}")
     public Produits findById(@PathVariable("no_produit") int no_produit) {
         Produits reponse =  prodService.findById(no_produit);

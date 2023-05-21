@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
-@RestController// -> La porte ouverte à toutes les fenêtres, seulement pour la phase de test, indiquer l'URL du site en phase de déploiement
+@RestController
 public class PromotionsController {
 
     @Autowired
@@ -20,14 +20,13 @@ public class PromotionsController {
     @Autowired
     public ProduitsServices prodServices;
 
-    @CrossOrigin(origins ="*")
+
     @GetMapping("/produits/{no_produit}/promotions")
     public List<Promotions> findAllOfProduits(@PathVariable("no_produit") int no_produit) {
         SiExiste.checkFound(prodServices.findById(no_produit));
         return promoServices.findAllOfProduits(no_produit);
     }
 
-    @CrossOrigin(origins ="*")
     @GetMapping("/promotions/{no_promotion}")
     public Promotions findById(@PathVariable("no_promotion") int no_promotion) {
         Promotions reponse = promoServices.findById(no_promotion);

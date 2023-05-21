@@ -1,12 +1,10 @@
 package com.bloc3.vitrine_produits_promo.Models;
 
 import jakarta.persistence.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Objects;
 
 @Entity
-@CrossOrigin(origins = "*")
 public class Promotions {
 
     @Id
